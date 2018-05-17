@@ -4,7 +4,6 @@ body {
 }
 
 h1 {
-    font-family: 'Ubuntu';
     font-size: 40px;
     text-align: center;
     color: white;
@@ -13,6 +12,12 @@ h1 {
 a {
     text-decoration: none;
     color: red;
+}
+
+li {
+    text-align: left;
+    font-size: 22px;
+    padding: 3px;
 }
 
 .banner {
