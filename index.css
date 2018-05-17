@@ -20,6 +20,10 @@ li {
     font-size: 22px;
 }
 
+p {
+    font-family: 'Ubuntu';
+}
+
 .banner {
     height: 7%;
 }
