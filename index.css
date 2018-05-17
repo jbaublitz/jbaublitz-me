@@ -1,4 +1,5 @@
 body {
+    font-family: 'Ubuntu';
     background: black;
 }
 
@@ -12,24 +13,6 @@ h1 {
 a {
     text-decoration: none;
     color: red;
-}
-
-li {
-    padding: 5px;
-    text-align: left;
-    font-size: 22px;
-}
-
-p {
-    font-family: 'Ubuntu';
-}
-
-h2 {
-    font-family: 'Ubuntu';
-}
-
-li {
-    font-family: 'Ubuntu';
 }
 
 .banner {
@@ -50,7 +33,6 @@ li {
 .center-panel-container .center-panel {
     border-radius: 20px;
     background: white;
-    text-color: black;
     text-align: center;
     padding: 10px;
     padding-left: 35px;
