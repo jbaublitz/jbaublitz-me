@@ -2,41 +2,41 @@ body {
     background: black;
 }
 
-.banner {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    background: white;
-    height: 9%;
-    width: 100%;
-}
-
-.banner a {
-    margin-left: 8px;
-}
-
-.center-panel-container {
-    display: flex;
-    width: 100%;
-    height: 90%;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-}
-
-.center-panel-container h1 {
+h1 {
+    font-family: 'Ubuntu';
+    font-size: 40px;
     text-align: center;
     color: white;
 }
 
+a {
+    text-decoration: none;
+    color: red;
+}
+
+li {
+    padding: 5px;
+    text-align: left;
+    font-size: 22px;
+}
+
+.banner {
+    height: 7%;
+}
+
+.body-panel {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+}
+
+.center-panel-container {
+    justify-content: center;
+    width: 60%;
+}
+
 .center-panel-container .center-panel {
-    font-family: 'Cutive Mono';
     border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: 70%;
     background: white;
     text-color: black;
     text-align: center;
@@ -58,4 +58,32 @@ body {
     margin: 30px;
     font-size: 22px;
     text-align: left;
+}
+
+.center-panel-container .center-panel .interests .padding {
+    display: inline-block;
+    width: 33%;
+}
+
+.center-panel-container .center-panel .interests .text {
+    font-family: 'Ubuntu Mono';
+    display: inline-block;
+    width: 75%;
+}
+
+.center-panel-container .center-panel .interests .text p {
+    text-align: center;
+}
+
+.center-panel-container .center-panel .interests .padding {
+    display: inline-block;
+    width: auto;
+}
+
+.center-panel-container .center-panel .interests p {
+    display: inline-block;
+}
+
+.center-panel-container .center-panel .links p {
+    text-align: center
 }
