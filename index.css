@@ -1,4 +1,6 @@
 body {
+    font-size: 22px;
+    text-align: left;
     font-family: 'Ubuntu';
     background: black;
 }
@@ -15,9 +17,11 @@ a {
 }
 
 li {
-    text-align: left;
-    font-size: 22px;
     padding: 3px;
+}
+
+.left-list {
+    text-align: left;
 }
 
 .banner {
@@ -35,7 +39,7 @@ li {
     width: 60%;
 }
 
-.center-panel-container .center-panel {
+.center-panel {
     border-radius: 20px;
     background: white;
     text-align: center;
@@ -44,45 +48,40 @@ li {
     padding-right: 35px;
 }
 
-.center-panel-container .center-panel .padding {
+.padding {
     height: 10px;
 }
 
-.center-panel-container .center-panel h1 {
+.center-panel h1 {
     margin: 30px;
     color: black;
 }
 
-.center-panel-container .center-panel p {
+.center-panel p {
     margin: 30px;
     font-size: 22px;
     text-align: left;
 }
 
-.center-panel-container .center-panel .interests .padding {
+.interests .padding {
     display: inline-block;
     width: 33%;
 }
 
-.center-panel-container .center-panel .interests .text {
+.text {
     font-family: 'Ubuntu Mono';
     display: inline-block;
     width: 75%;
 }
 
-.center-panel-container .center-panel .interests .text p {
+.text p {
     text-align: center;
 }
 
-.center-panel-container .center-panel .interests .padding {
-    display: inline-block;
-    width: auto;
-}
-
-.center-panel-container .center-panel .interests p {
+.interests p {
     display: inline-block;
 }
 
-.center-panel-container .center-panel .links p {
+.links p {
     text-align: center
 }
