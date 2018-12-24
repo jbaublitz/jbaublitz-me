@@ -1,34 +1,50 @@
 body {
-    font-size: 22px;
-    text-align: left;
-    font-family: 'Ubuntu';
-    background: black;
-}
-
-h1 {
-    font-size: 40px;
-    text-align: center;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: red;
-}
-
-li {
-    padding: 3px;
+    background-image: radial-gradient(circle, #555555, black);
 }
 
 .left-list {
     text-align: left;
 }
 
+.header-one {
+    padding: 20px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.header-two {
+    font-size: 25px;
+    padding: 10px;
+    font-weight: bold;
+}
+
 .banner {
     height: 7%;
 }
 
+.navigation {
+    display: inline-block;
+}
+
+.navigation div {
+    background: black;
+    opacity: 0.7;
+    border: solid;
+    border-width: 10px;
+    border-bottom-width: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+    float: left;
+}
+
+.navigation div a {
+    text-decoration: none;
+    color: white;
+}
+
 .body-panel {
+    font-family: 'Ubuntu';
     display: inline-block;
     vertical-align: top;
     width: 20%;
@@ -40,16 +56,18 @@ li {
 }
 
 .center-panel {
-    border-radius: 20px;
-    background: white;
+    border: solid;
+    border-color: black;
+    border-width: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white;
+    opacity: 0.7;
     text-align: center;
     padding: 10px;
     padding-left: 35px;
     padding-right: 35px;
-}
-
-.padding {
-    height: 10px;
 }
 
 .center-panel h1 {
@@ -58,14 +76,9 @@ li {
 }
 
 .center-panel p {
-    margin: 30px;
+    padding: 5px;
     font-size: 22px;
     text-align: left;
-}
-
-.interests .padding {
-    display: inline-block;
-    width: 33%;
 }
 
 .text {
@@ -78,10 +91,11 @@ li {
     text-align: center;
 }
 
-.interests p {
-    display: inline-block;
-}
-
 .links p {
     text-align: center
+}
+
+.left-list li {
+    font-weight: bold;
+    font-size: 22px;
 }
