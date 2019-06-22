@@ -27,6 +27,7 @@ body {
 }
 
 .navigation div {
+    font-family: 'Special Elite', cursive;
     background: black;
     opacity: 0.7;
     border-bottom-width: 0px;
@@ -49,8 +50,15 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
 .body-panel {
-    font-family: 'Ubuntu';
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-size: 20px;
     display: inline-block;
     vertical-align: top;
     width: 20%;
@@ -76,6 +84,10 @@ body {
     padding-right: 35px;
 }
 
+.center-panel .body {
+    font-family: 'Special Elite', cursive;
+}
+
 .center-panel h1 {
     margin: 30px;
     color: black;
@@ -87,21 +99,26 @@ body {
     text-align: left;
 }
 
-.text {
-    font-family: 'Ubuntu Mono';
+.center-list {
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-size: 22px;
     display: inline-block;
     width: 75%;
 }
 
-.text p {
-    text-align: center;
+.center-list ul {
+    text-align: left;
 }
 
-.links p {
+.links ul li {
     text-align: center
 }
 
 .left-list li {
     font-weight: bold;
     font-size: 22px;
+}
+
+.contact-info {
+    font-family: 'Special Elite', cursive;
 }
