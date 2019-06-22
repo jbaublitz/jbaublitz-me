@@ -99,6 +99,11 @@ a {
     text-align: left;
 }
 
+.summary p {
+    font-size: 30px;
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
 .center-list {
     font-family: 'IM Fell DW Pica SC', serif;
     font-size: 22px;
