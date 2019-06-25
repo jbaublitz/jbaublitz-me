@@ -13,13 +13,10 @@ script:
 - wasm-pack build --target no-modules
 - cd ..
 - cp contact.css humans.css index.css index.html template.css jbaublitz-me-wasm/pkg
-
-before_deploy:
-  - ls ./jbaublitz-me-wasm/pkg
-deploy:
-  local_dir: ./jbaublitz-me-wasm/pkg/
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  on:
-    branch: master
+after_success:
+- cd ./jbaublitz-me-wasm/pkg
+- git init
+- git checkout -b gh-pages
+- git add .
+- git -c user.name='travis' -c user.email='travis' commit -m "Travis auto-deploy"
+- git push -f https://jbaublitz:$GITHUB_TOKEN@github.com/jbaublitz/jbaublitz-me-gh-pages gh-pages
