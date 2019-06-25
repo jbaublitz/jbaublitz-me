@@ -1,107 +1,16 @@
-body {
-    background-image: radial-gradient(circle, #555555, black);
-}
-
-.left-list {
-    text-align: left;
+.header {
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-weight: bold;
 }
 
 .header-one {
     padding: 20px;
     font-size: 35px;
-    font-weight: bold;
 }
 
 .header-two {
+    padding: 10px;
     font-size: 25px;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.banner {
-    height: 7%;
-}
-
-.navigation {
-    display: inline-block;
-}
-
-.navigation div {
-    font-family: 'Special Elite', cursive;
-    background: black;
-    opacity: 0.7;
-    border-bottom-width: 0px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 7px;
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-}
-
-.navigation div:hover {
-    background-image: linear-gradient(white, black);
-    border-color: linear-gradient(white, black);
-}
-
-.navigation div a {
-    text-decoration: none;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: red;
-    font-weight: bold;
-}
-
-.body-panel {
-    font-family: 'IM Fell DW Pica SC', serif;
-    font-size: 20px;
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-}
-
-.center-panel-container {
-    justify-content: center;
-    width: 60%;
-}
-
-.center-panel {
-    border: solid;
-    border-color: black;
-    border-width: 10px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    background-color: white;
-    opacity: 0.7;
-    text-align: center;
-    padding: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-}
-
-.center-panel .body {
-    font-family: 'Special Elite', cursive;
-}
-
-.center-panel h1 {
-    margin: 30px;
-    color: black;
-}
-
-.center-panel p {
-    padding: 5px;
-    font-size: 22px;
-    text-align: left;
-}
-
-.summary p {
-    font-size: 30px;
-    font-family: 'IM Fell DW Pica SC', serif;
 }
 
 .center-list {
@@ -113,17 +22,4 @@ a {
 
 .center-list ul {
     text-align: left;
-}
-
-.links ul li {
-    text-align: center
-}
-
-.left-list li {
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.contact-info {
-    font-family: 'Special Elite', cursive;
 }

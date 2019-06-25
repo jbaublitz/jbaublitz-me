@@ -35,4 +35,12 @@ opt-level = "s"
 
 [dependencies.web-sys]
 version = "*"
-features = ["console"]
+features = [
+    "console",
+    "Document",
+    "Element",
+    "EventTarget",
+    "HtmlDocument",
+    "HtmlBodyElement",
+    "Window"
+]

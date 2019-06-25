@@ -2,41 +2,40 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="template.css">
         <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="humans.css">
         <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Special+Elite&display=swap" rel="stylesheet">
         <title></title>
     </head>
-    <body hidden>
-        <div class="banner">
-            <a href="https://github.com/jbaublitz">
-                <img src="GitHub-Mark-Light-64px.png">
-            </a>
-        </div>
-        <div class="body-panel"></div>
-        <div class="center-panel-container body-panel">
-            <nav class="navigation">
-                <div><a href="template.html?page=index">Home</a></div>
-                <div><a href="template.html?page=humans">humans.txt</a></div>
-                <div><a href="template.html?page=contact">Contact</a></div>
-            </nav>
-            <div class="center-panel">
+    <body>
+        <div class="all">
+            <div class="banner">
+                <a href="https://github.com/jbaublitz">
+                    <img src="GitHub-Mark-Light-64px.png">
+                </a>
+            </div>
+            <div id="fadeinout" class="body-panel-in">
+                <div class="body-panel"></div>
+                <div class="center-panel-container body-panel">
+                    <nav class="navigation">
+                        <div><a href="#" onclick="wasm_bindgen.choose_page('index');">Home</a></div>
+                        <div><a href="#" onclick="wasm_bindgen.choose_page('humans');">humans.txt</a></div>
+                        <div><a href="#" onclick="wasm_bindgen.choose_page('humans');">Contact</a></div>
+                    </nav>
+                    <div id="center-panel">
+                    </div>
+                </div>
+                <div class="body-panel"></div>
             </div>
         </div>
-        <div class="body-panel"></div>
 
         <script src="jbaublitz-me-wasm/pkg/jbaublitz_me_wasm.js"></script>
         <script type="module">
-            var page = window.location.search.replace(/^\?/, "").split("&").filter(elem => elem.match(/^page\=/) != null).map(elem => elem.replace(/^page\=/, "")).pop();
-            if (page == null) {
-                page = "index";
-            }
-
             async function run() {
                 await wasm_bindgen('./jbaublitz-me-wasm/pkg/jbaublitz_me_wasm_bg.wasm');
-
-                wasm_bindgen.choose_page(page);
+                wasm_bindgen.choose_page('index');
             }
-
             run();
         </script>
     </body>

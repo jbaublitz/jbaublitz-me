@@ -6,14 +6,18 @@ use std::fmt::{self,Display};
 use wasm_bindgen::prelude::*;
 use web_sys::console;
 
+mod contact;
+use contact::contact;
+
+mod home;
+use home::home;
+
+mod humans;
+use humans::humans;
+
 #[cfg(feature = "wee_alloc")]
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
-
-#[wasm_bindgen]
-extern {
-    fn alert(s: &str);
-}
 
 #[derive(Debug)]
 struct JbaublitzError(&'static str);
@@ -24,40 +28,17 @@ impl Display for JbaublitzError {
     }
 }
 
-impl Error for JbaublitzError {
-
-}
+impl Error for JbaublitzError { }
 
 #[wasm_bindgen]
 pub fn choose_page(page: &str) {
-    match page {
-        "index" => index().unwrap_or_else(|e| {
-            let error = format!("{}", e);
-            console::log_1(&error.into());
-        }),
-        "humans" => humans().unwrap_or_else(|e| {
-            let error = format!("{}", e);
-            console::log_1(&error.into());
-        }),
-        "contact" => contact().unwrap_or_else(|e| {
-            let error = format!("{}", e);
-            console::log_1(&error.into());
-        }),
-        _ => index().unwrap_or_else(|e| {
-            let error = format!("{}", e);
-            console::log_1(&error.into());
-        }),
+    let res = match page {
+        "humans" => humans(),
+        "contact" => contact(),
+        _ => home(),
     };
-}
-
-fn index() -> Result<(), Box<dyn Error>> {
-    Err(Box::new(JbaublitzError("OOPS")))
-}
-
-fn humans() -> Result<(), Box<dyn Error>> {
-    Ok(())
-}
-
-fn contact() -> Result<(), Box<dyn Error>> {
-    Ok(())
+    res.unwrap_or_else(|e| {
+        let error = format!("{}", e);
+        console::log_1(&error.into());
+    });
 }
