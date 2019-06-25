@@ -39,8 +39,5 @@ features = [
     "console",
     "Document",
     "Element",
-    "EventTarget",
-    "HtmlDocument",
-    "HtmlBodyElement",
     "Window"
 ]

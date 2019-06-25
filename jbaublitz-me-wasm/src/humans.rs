@@ -32,7 +32,8 @@ pub fn humans() -> Result<(), Box<dyn Error>> {
     <div class="body">
         <p>I work on a volunteer basis as part of a introductory systems education group at <a href="https://www.resilientcoders.org">Resilient Coders</a>. If you think diversity matters, click on the link and consider supporting an organization that's trying to make that happen in a real and actionable way!</p>
     </div>
-</div>"#);
+</div>
+"#);
 
     Ok(())
 }

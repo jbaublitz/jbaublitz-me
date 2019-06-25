@@ -7,15 +7,15 @@ body {
     animation-name: fadein;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 
-.body-panel-out-in {
+.body-panel-out {
     opacity: 0.75;
-    animation-name: fadeoutin;
+    animation-name: fadeout;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 
 @keyframes fadein {
@@ -29,18 +29,14 @@ body {
     }
 }
 
-@keyframes fadeoutin {
+@keyframes fadeout {
     0% {
         opacity: 0.75;
         filter: blur(0px);
     }
-    50% {
+    100% {
         opacity: 0;
         filter: blur(20px);
-    }
-    100% {
-        opacity: 0.75;
-        filter: blur(0px);
     }
 }
 
