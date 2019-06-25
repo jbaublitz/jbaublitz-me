@@ -8,6 +8,7 @@ cache: cargo
 env: RUST_BACKTRACE=1
 
 script:
+- :
 
 before_deploy:
 - rustup target add wasm32-unknown-unknown
