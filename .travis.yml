@@ -15,6 +15,7 @@ script:
 - cp contact.css humans.css index.css index.html template.css jbaublitz-me-wasm/pkg
 after_success:
 - cd ./jbaublitz-me-wasm/pkg
+- ls
 - git init
 - git checkout -b gh-pages
 - git add -A .
