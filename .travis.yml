@@ -19,5 +19,6 @@ after_success:
 - git init
 - git checkout -b gh-pages
 - git add -A .
+- git status
 - git -c user.name='travis' -c user.email='travis' commit -m "Travis auto-deploy"
 - git push -f https://jbaublitz:$GITHUB_TOKEN@github.com/jbaublitz/jbaublitz-me-gh-pages gh-pages
