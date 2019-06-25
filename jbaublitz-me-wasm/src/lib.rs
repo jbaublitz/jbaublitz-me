@@ -7,13 +7,16 @@ use wasm_bindgen::prelude::*;
 use web_sys::console;
 
 mod contact;
-use contact::contact;
+use contact::CONTACT;
 
 mod home;
-use home::home;
+use home::HOME;
 
 mod humans;
-use humans::humans;
+use humans::HUMANS;
+
+mod textset;
+use textset::set_text;
 
 #[cfg(feature = "wee_alloc")]
 #[global_allocator]
@@ -33,9 +36,9 @@ impl Error for JbaublitzError { }
 #[wasm_bindgen]
 pub fn choose_page(page: &str) {
     let res = match page {
-        "humans" => humans(),
-        "contact" => contact(),
-        _ => home(),
+        "humans" => set_text(HUMANS),
+        "contact" => set_text(CONTACT),
+        _ => set_text(HOME),
     };
     res.unwrap_or_else(|e| {
         let error = format!("{}", e);

@@ -2,6 +2,9 @@
 name = "jbaublitz-me-wasm"
 version = "0.1.0"
 authors = ["John Baublitz <john.m.baublitz@gmail.com>"]
+description = "My website"
+repository = "https://github.com/jbaublitz/jbaublitz-me"
+license = "BSD-3"
 edition = "2018"
 
 [lib]

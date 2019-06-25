@@ -1,20 +1,4 @@
-use std::error::Error;
-
-use web_sys::window;
-
-use super::JbaublitzError;
-
-pub fn humans() -> Result<(), Box<dyn Error>> {
-    let elem_op = window().and_then(|w| w.document())
-        .and_then(|d| d.get_element_by_id("center-panel"));
-    let elem = match elem_op {
-        Some(e) => e,
-        None => {
-            return Err(Box::new(JbaublitzError("No element with id=\"center-panel\" \
-                                                       found")));
-        }
-    };
-    elem.set_inner_html(r#"
+pub const HUMANS: &'static str = r#"
 <div id="center-panel-inner">
     <div class="body">
         <div class="summary">
@@ -33,8 +17,4 @@ pub fn humans() -> Result<(), Box<dyn Error>> {
         <p>I work on a volunteer basis as part of a introductory systems education group at <a href="https://www.resilientcoders.org">Resilient Coders</a>. If you think diversity matters, click on the link and consider supporting an organization that's trying to make that happen in a real and actionable way!</p>
     </div>
 </div>
-"#);
-
-    Ok(())
-}
-
+"#;

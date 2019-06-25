@@ -1,20 +1,4 @@
-use std::error::Error;
-
-use web_sys::window;
-
-use super::JbaublitzError;
-
-pub fn home() -> Result<(), Box<dyn Error>> {
-    let elem_op = window().and_then(|w| w.document())
-        .and_then(|d| d.get_element_by_id("center-panel"));
-    let elem_centerpanel = match elem_op {
-        Some(e) => e,
-        None => {
-            return Err(Box::new(JbaublitzError("No element with id=\"center-panel\" \
-                                                       found")));
-        }
-    };
-    elem_centerpanel.set_inner_html(r#"
+pub const HOME: &'static str = r#"
 <div id="center-panel-inner">
 	<div class="header header-one">Hello and thanks for dropping by!</div>
 	<div class="header header-two">I'm John Baublitz and I do a lot of open source work.</div>
@@ -36,7 +20,4 @@ pub fn home() -> Result<(), Box<dyn Error>> {
 		<p>Because of the domains I work in, I've gravitated mostly towards C, Python, and Rust to get things done.</p>
 	</div>
 </div>
-"#);
-
-    Ok(())
-}
+"#;
