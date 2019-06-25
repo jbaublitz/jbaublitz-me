@@ -12,7 +12,7 @@ script:
 - cd jbaublitz-me-wasm
 - wasm-pack build --target no-modules
 - cd ..
-- cp contact.css humans.css index.css index.html template.css jbaublitz-me-wasm/pkg
+- cp GitHub-Mark-Light-64px.png contact.css humans.css index.css index.html template.css jbaublitz-me-wasm/pkg
 before_deploy:
   rm ./jbaublitz-me-wasm/pkg/.gitignore
 deploy:
