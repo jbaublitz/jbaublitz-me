@@ -6,16 +6,14 @@ rust:
 cache: cargo
 
 env: RUST_BACKTRACE=1
-before_script:
+
+before_deploy:
 - rustup target add wasm32-unknown-unknown
-script:
 - cd jbaublitz-me-wasm
 - wasm-pack build --target no-modules
-
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  keep_history: true
   on:
     branch: master
