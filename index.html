@@ -16,7 +16,7 @@
                     <img src="GitHub-Mark-Light-64px.png">
                 </a>
             </div>
-            <div id="fadeinout" class="body-panel-in">
+            <div id="fadeinout" hidden>
                 <div class="body-panel"></div>
                 <div class="center-panel-container body-panel">
                     <nav class="navigation">
@@ -46,6 +46,9 @@
             async function run() {
                 await wasm_bindgen('./jbaublitz_me_wasm_bg.wasm');
                 wasm_bindgen.choose_page('index');
+                var fio = document.getElementById("fadeinout");
+                fio.className = "body-panel-in";
+                fio.removeAttribute('hidden');
             }
             run();
         </script>
