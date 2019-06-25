@@ -8,7 +8,9 @@ cache: cargo
 env: RUST_BACKTRACE=1
 
 script:
-- :
+- rustup target add wasm32-unknown-unknown
+- cd jbaublitz-me-wasm
+- wasm-pack build --target no-modules
 
 before_deploy:
 - rustup target add wasm32-unknown-unknown
