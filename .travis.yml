@@ -1,18 +1,17 @@
 language: rust
 sudo: false
+rust:
+  - nightly
 
 cache: cargo
 
+env: RUST_BACKTRACE=1
+before_script:
+- rustup target add wasm32-unknown-unknown
 script:
-  # Builds on nightly.
-  - rust: nightly
-    env: RUST_BACKTRACE=1
-    before_script:
-      - rustup target add wasm32-unknown-unknown
-    script:
-      - cd jbaublitz-me-wasm
-      - cargo install wasm-pack
-      - wasm-pack build --no-modules
+- cd jbaublitz-me-wasm
+- cargo install wasm-pack
+- wasm-pack build --no-modules
 
 deploy:
   provider: pages
