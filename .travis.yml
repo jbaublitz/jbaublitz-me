@@ -11,7 +11,7 @@ before_script:
 script:
 - cd jbaublitz-me-wasm
 - cargo install wasm-pack
-- wasm-pack build --no-modules
+- wasm-pack build --target no-modules
 
 deploy:
   provider: pages
