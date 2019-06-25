@@ -14,6 +14,8 @@ script:
 - cd ..
 - cp contact.css humans.css index.css index.html template.css jbaublitz-me-wasm/pkg
 
+before_deploy:
+  - ls ./jbaublitz-me-wasm/pkg
 deploy:
   local_dir: ./jbaublitz-me-wasm/pkg/
   provider: pages
