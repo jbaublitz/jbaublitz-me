@@ -21,3 +21,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   on:
     master
+  local_dir: ./jbaublitz-me-wasm/pkg
