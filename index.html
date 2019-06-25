@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <script src="jbaublitz-me-wasm/pkg/jbaublitz_me_wasm.js"></script>
+        <script src="jbaublitz_me_wasm.js"></script>
         <script>
             function fadeOut(page) {
                 var fio = document.getElementById("fadeinout");
@@ -44,7 +44,7 @@
         </script>
         <script type="module">
             async function run() {
-                await wasm_bindgen('./jbaublitz-me-wasm/pkg/jbaublitz_me_wasm_bg.wasm');
+                await wasm_bindgen('./jbaublitz_me_wasm_bg.wasm');
                 wasm_bindgen.choose_page('index');
             }
             run();

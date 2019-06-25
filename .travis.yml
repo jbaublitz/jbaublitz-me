@@ -11,8 +11,11 @@ script:
 - rustup target add wasm32-unknown-unknown
 - cd jbaublitz-me-wasm
 - wasm-pack build --target no-modules
+- cd ..
+- cp contact.css humans.css index.css index.html template.css jbaublitz-me-wasm/pkg
 
 deploy:
+  local_dir: ./jbaublitz-me-wasm/pkg/
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
