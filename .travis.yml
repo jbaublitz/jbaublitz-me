@@ -12,10 +12,6 @@ script:
 - cd jbaublitz-me-wasm
 - wasm-pack build --target no-modules
 
-before_deploy:
-- rustup target add wasm32-unknown-unknown
-- cd jbaublitz-me-wasm
-- wasm-pack build --target no-modules
 deploy:
   provider: pages
   skip_cleanup: true
