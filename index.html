@@ -6,15 +6,17 @@
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" type="text/css" href="humans.css">
         <link rel="stylesheet" type="text/css" href="contact.css">
+        <link rel="stylesheet" type="text/css" href="graphics.css">
         <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Special+Elite&display=swap" rel="stylesheet">
         <title>jbaublitz.me</title>
     </head>
     <body>
         <div class="all">
             <div class="banner">
-                <a href="https://github.com/jbaublitz">
+                <a id="banner-link-left" href="https://github.com/jbaublitz">
                     <img src="GitHub-Mark-Light-64px.png">
                 </a>
+                <a id="banner-link-right" href="https://github.com/jbaublitz/jbaublitz-me">Website source code</a>
             </div>
             <div id="fadeinout" hidden>
                 <div class="body-panel"></div>
@@ -23,6 +25,7 @@
                         <div onclick="fadeOut('index');">Home</div>
                         <div onclick="fadeOut('humans');">humans.txt</div>
                         <div onclick="fadeOut('contact');">Contact</div>
+                        <div onclick="fadeOut('graphics');">Wasm graphics</div>
                     </nav>
                     <div id="center-panel">
                     </div>

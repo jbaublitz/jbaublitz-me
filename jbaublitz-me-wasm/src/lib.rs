@@ -9,6 +9,9 @@ use web_sys::console;
 mod contact;
 use contact::CONTACT;
 
+mod graphics;
+use graphics::graphics;
+
 mod home;
 use home::HOME;
 
@@ -23,7 +26,7 @@ use textset::set_text;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[derive(Debug)]
-struct JbaublitzError(&'static str);
+pub struct JbaublitzError(&'static str);
 
 impl Display for JbaublitzError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
@@ -38,6 +41,7 @@ pub fn choose_page(page: &str) {
     let res = match page {
         "humans" => set_text(HUMANS),
         "contact" => set_text(CONTACT),
+        "graphics" => graphics(),
         _ => set_text(HOME),
     };
     res.unwrap_or_else(|e| {

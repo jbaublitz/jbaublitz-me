@@ -44,6 +44,34 @@ body {
     height: 7%;
 }
 
+#banner-link-left {
+    float: left;
+}
+
+#banner-link-right {
+    margin-top: 2px;
+    margin-right: 2px;
+    font-family: 'IM Fell DW Pica SC', serif;
+    float: right;
+    color: #aa0000;
+}
+
+#banner-link-right:hover {
+    margin-top: 0px;
+    margin-right: 0px;
+    font-family: 'IM Fell DW Pica SC', serif;
+    float: right;
+    color: #aa0000;
+    font-size: 17px;
+}
+
+a {
+    font-family: 'Special Elite', cursive;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
 .navigation {
     display: inline-block;
 }
@@ -67,12 +95,6 @@ body {
     cursor: pointer;
     background-image: linear-gradient(white, black);
     border-color: linear-gradient(white, black);
-}
-
-a {
-    text-decoration: none;
-    color: red;
-    font-weight: bold;
 }
 
 .body-panel {
