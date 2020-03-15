@@ -9,8 +9,9 @@ env: RUST_BACKTRACE=1
 
 script:
 - rustup target add wasm32-unknown-unknown
+- curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 - cd jbaublitz-me-wasm
-- ~/.cargo/bin/wasm-pack build --target no-modules
+- wasm-pack build --target no-modules
 - cd ..
 - cp GitHub-Mark-Light-64px.png contact.css humans.css index.css index.html template.css jbaublitz-me-wasm/pkg
 before_deploy:
