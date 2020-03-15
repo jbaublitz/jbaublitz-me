@@ -14,7 +14,7 @@ pub const HUMANS: &'static str = r#"
         <li>Empathy is crucial and should be practiced mutually during interactions with collaborators</li>
     </ul>
     <div class="body">
-        <p>I work on a volunteer basis as part of a introductory systems education group at <a href="https://www.resilientcoders.org">Resilient Coders</a>. If you think diversity matters, click on the link and consider supporting an organization that's trying to make that happen in a real and actionable way!</p>
+        <p>If you think diversity matters, click <a href="https://www.resilientcoders.org">here</a> to go to the Resilient Coders website and consider supporting an organization that's trying to make that happen in a real and actionable way!</p>
     </div>
 </div>
 "#;
