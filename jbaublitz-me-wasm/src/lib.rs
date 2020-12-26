@@ -1,16 +1,15 @@
 extern crate web_sys;
 
-use std::error::Error;
-use std::fmt::{self,Display};
+use std::{
+    error::Error,
+    fmt::{self, Display},
+};
 
 use wasm_bindgen::prelude::*;
 use web_sys::console;
 
 mod contact;
 use contact::CONTACT;
-
-mod graphics;
-use graphics::graphics;
 
 mod home;
 use home::HOME;
@@ -34,18 +33,17 @@ impl Display for JbaublitzError {
     }
 }
 
-impl Error for JbaublitzError { }
+impl Error for JbaublitzError {}
 
 #[wasm_bindgen]
 pub fn choose_page(page: &str) {
     let res = match page {
         "humans" => set_text(HUMANS),
         "contact" => set_text(CONTACT),
-        "graphics" => graphics(),
         _ => set_text(HOME),
     };
-    res.unwrap_or_else(|e| {
+    if let Err(e) = res {
         let error = format!("{}", e);
         console::log_1(&error.into());
-    });
+    }
 }

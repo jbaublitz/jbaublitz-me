@@ -1,5 +1,5 @@
 body {
-    background-image: radial-gradient(circle, #555555, black);
+    background-image: linear-gradient(to right, black, #555555, black);
 }
 
 .body-panel-in {
@@ -53,7 +53,7 @@ body {
     margin-right: 2px;
     font-family: 'IM Fell DW Pica SC', serif;
     float: right;
-    color: #aa0000;
+    color: gray;
 }
 
 #banner-link-right:hover {
@@ -61,14 +61,13 @@ body {
     margin-right: 0px;
     font-family: 'IM Fell DW Pica SC', serif;
     float: right;
-    color: #aa0000;
+    color: white;
     font-size: 17px;
 }
 
 a {
     font-family: 'Special Elite', cursive;
     text-decoration: none;
-    color: red;
     font-weight: bold;
 }
 

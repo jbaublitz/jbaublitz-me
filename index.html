@@ -6,7 +6,6 @@
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" type="text/css" href="humans.css">
         <link rel="stylesheet" type="text/css" href="contact.css">
-        <link rel="stylesheet" type="text/css" href="graphics.css">
         <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Special+Elite&display=swap" rel="stylesheet">
         <title>jbaublitz.me</title>
     </head>
@@ -25,7 +24,6 @@
                         <div onclick="fadeOut('index');">Home</div>
                         <div onclick="fadeOut('humans');">humans.txt</div>
                         <div onclick="fadeOut('contact');">Contact</div>
-                        <div onclick="fadeOut('graphics');">Wasm graphics</div>
                     </nav>
                     <div id="center-panel">
                     </div>
@@ -34,8 +32,10 @@
             </div>
         </div>
 
-        <script src="jbaublitz_me_wasm.js"></script>
-        <script>
+        <script src='./jbaublitz_me_wasm.js'></script>
+        <script> 
+            const { choose_page } = wasm_bindgen;
+
             function fadeOut(page) {
                 var fio = document.getElementById("fadeinout");
                 fio.className = "body-panel-out";
@@ -44,15 +44,15 @@
                     this.className = "body-panel-in";
                 });
             }
-        </script>
-        <script type="module">
+
             async function run() {
                 await wasm_bindgen('./jbaublitz_me_wasm_bg.wasm');
-                wasm_bindgen.choose_page('index');
+                choose_page('index');
                 var fio = document.getElementById("fadeinout");
                 fio.className = "body-panel-in";
                 fio.removeAttribute('hidden');
             }
+
             run();
         </script>
     </body>
