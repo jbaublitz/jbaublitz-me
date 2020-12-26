@@ -1,0 +1,137 @@
+body {
+    background-image: linear-gradient(to right, black, #555555, black);
+}
+
+.body-panel-in {
+    opacity: 0.75;
+    animation-name: fadein;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+.body-panel-out {
+    opacity: 0.75;
+    animation-name: fadeout;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+    }
+    100% {
+        opacity: 0.75;
+        filter: blur(0px);
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 0.75;
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(20px);
+    }
+}
+
+.banner {
+    height: 7%;
+}
+
+#banner-link-left {
+    float: left;
+}
+
+#banner-link-right {
+    margin-top: 2px;
+    margin-right: 2px;
+    font-family: 'IM Fell DW Pica SC', serif;
+    float: right;
+    color: gray;
+}
+
+#banner-link-right:hover {
+    margin-top: 0px;
+    margin-right: 0px;
+    font-family: 'IM Fell DW Pica SC', serif;
+    float: right;
+    color: white;
+    font-size: 17px;
+}
+
+a {
+    font-family: 'Special Elite', cursive;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation {
+    display: inline-block;
+}
+
+.navigation div {
+    font-family: 'Special Elite', cursive;
+    color: white;
+    background: black;
+    opacity: 0.7;
+    border-bottom-width: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.navigation div:hover {
+    cursor: pointer;
+    background-image: linear-gradient(white, black);
+    border-color: linear-gradient(white, black);
+}
+
+.body-panel {
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+}
+
+#center-panel {
+    font-family: 'Special Elite', cursive;
+    font-size: 22px;
+    border: solid;
+    border-color: black;
+    border-width: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white;
+    opacity: 0.7;
+    text-align: center;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+#center-panel h1 {
+    margin: 30px;
+    color: black;
+}
+
+#center-panel p {
+    padding: 5px;
+    text-align: left;
+}
+
+.center-panel-container {
+    justify-content: center;
+    width: 60%;
+}
