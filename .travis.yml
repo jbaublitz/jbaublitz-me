@@ -1,0 +1,25 @@
+language: rust
+sudo: false
+rust:
+  - nightly
+
+cache: cargo
+
+env: RUST_BACKTRACE=1
+
+script:
+- rustup target add wasm32-unknown-unknown
+- curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+- cd jbaublitz-me-wasm
+- wasm-pack build --target no-modules
+- cd ..
+- ./bundle.sh
+before_deploy:
+  rm ./jbaublitz-me-wasm/pkg/.gitignore
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    master
+  local_dir: ./jbaublitz-me-wasm/pkg

@@ -1,0 +1,20 @@
+{
+  "name": "jbaublitz-me-wasm",
+  "collaborators": [
+    "John Baublitz <john.m.baublitz@gmail.com>"
+  ],
+  "description": "My website",
+  "version": "0.1.0",
+  "license": "BSD-3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbaublitz/jbaublitz-me"
+  },
+  "files": [
+    "jbaublitz_me_wasm_bg.wasm",
+    "jbaublitz_me_wasm.js",
+    "jbaublitz_me_wasm.d.ts"
+  ],
+  "browser": "jbaublitz_me_wasm.js",
+  "types": "jbaublitz_me_wasm.d.ts"
+}

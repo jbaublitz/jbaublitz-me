@@ -1,0 +1,25 @@
+.header {
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-weight: bold;
+}
+
+.header-one {
+    padding: 20px;
+    font-size: 35px;
+}
+
+.header-two {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.center-list {
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-size: 22px;
+    display: inline-block;
+    width: 75%;
+}
+
+.center-list ul {
+    text-align: left;
+}

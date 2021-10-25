@@ -1,0 +1,59 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="template.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="humans.css">
+        <link rel="stylesheet" type="text/css" href="contact.css">
+        <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Special+Elite&display=swap" rel="stylesheet">
+        <title>jbaublitz.me</title>
+    </head>
+    <body>
+        <div class="all">
+            <div class="banner">
+                <a id="banner-link-left" href="https://github.com/jbaublitz">
+                    <img src="GitHub-Mark-Light-64px.png">
+                </a>
+                <a id="banner-link-right" href="https://github.com/jbaublitz/jbaublitz-me">Website source code</a>
+            </div>
+            <div id="fadeinout" hidden>
+                <div class="body-panel"></div>
+                <div class="center-panel-container body-panel">
+                    <nav class="navigation">
+                        <div onclick="fadeOut('index');">Home</div>
+                        <div onclick="fadeOut('humans');">humans.txt</div>
+                        <div onclick="fadeOut('contact');">Contact</div>
+                    </nav>
+                    <div id="center-panel">
+                    </div>
+                </div>
+                <div class="body-panel"></div>
+            </div>
+        </div>
+
+        <script src='./jbaublitz_me_wasm.js'></script>
+        <script> 
+            const { choose_page } = wasm_bindgen;
+
+            function fadeOut(page) {
+                var fio = document.getElementById("fadeinout");
+                fio.className = "body-panel-out";
+                fio.addEventListener('animationend', function() {
+                    wasm_bindgen.choose_page(page);
+                    this.className = "body-panel-in";
+                });
+            }
+
+            async function run() {
+                await wasm_bindgen('./jbaublitz_me_wasm_bg.wasm');
+                choose_page('index');
+                var fio = document.getElementById("fadeinout");
+                fio.className = "body-panel-in";
+                fio.removeAttribute('hidden');
+            }
+
+            run();
+        </script>
+    </body>
+</html>
