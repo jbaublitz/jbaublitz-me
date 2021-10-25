@@ -1,6 +1,6 @@
 pub const CONTACT: &'static str = r#"
 <div class="contact-type">
-    <p><b>Freenode IRC handle:</b></p>
+    <p><b>IRC handle:</b></p>
 </div>
 <div class="contact-info">
     <p>jbaublitzzz</p>
