@@ -21,7 +21,7 @@
                 <div class="body-panel"></div>
                 <div class="center-panel-container body-panel">
                     <nav class="navigation">
-                        <div onclick="fadeOut('index');">Home</div>
+                        <div onclick="fadeOut('home');">Home</div>
                         <div onclick="fadeOut('humans');">humans.txt</div>
                         <div onclick="fadeOut('contact');">Contact</div>
                     </nav>
@@ -32,22 +32,91 @@
             </div>
         </div>
 
-        <script src='./jbaublitz_me_wasm.js'></script>
+        <template id=home>
+            <div id="center-panel-inner">
+                <div class="header header-one">Hello and thanks for dropping by!</div>
+                <div class="header header-two">I'm John Baublitz and I do a lot of open source work.</div>
+                <div class="header header-two">A little bit about me and my interests:</div>
+                <div class="body">
+                    <p>I have been hacking on things since 2011. Feel free to poke around my Github for my open source personal projects and contributions. Most of my time is divided between contributing to large open source projects and maintaining my own personal projects in the hopes that they may be useful to someone along the way</p>
+                    <p>Some of the areas I enjoy focusing on most are:</p>
+                    <div class="center-list">
+                        <ul>
+                            <li>strong typing</li>
+                            <li>working with and writing code for networking and network stacks</li>
+                            <li>digging into compilers and programming languages</li>
+                            <li>working with operating systems both in kernel space and user space</li>
+                            <li>learning more about hardware</li>
+                            <li>systems security</li>
+                            <li>sometimes writing tooling to make life easier for myself</li>
+                        <ul>
+                    </div>
+                    <p>Because of the domains I work in, I've gravitated mostly towards C, Python, and Rust to get things done.</p>
+                </div>
+            </div>
+        </template>
+
+		<template id="humans">
+			<div class="body">
+				<div class="summary">
+					<p>We often forget about the <b>human</b> component of software in the industry.</p>
+				</div>
+				<p>In an effort to challenge the notion that software is only about the tech, these are the things I try to bring to my collaborations:</p>
+			</div>
+			<ul class="left-list">
+				<li>Communicate online like you would face to face</li>
+				<li>Acknowledge that we're all still learning</li>
+				<li>Diversity matters and starts with individual acceptance of difference</li>
+				<li>When explaining, think back to when you were learning and explain it to yourself back then</li>
+				<li>Empathy is crucial and should be practiced mutually during interactions with collaborators</li>
+			</ul>
+			<div class="body">
+				<p>I work on a volunteer basis as part of <a href="https://www.resilientcoders.org">Resilient Coders</a>. If you think diversity matters, click on the link and consider supporting an organization that's trying to make that happen in a real and actionable way!</p>
+			</div>
+		</template>
+
+		<template id="contact">
+			<div class="contact-type">
+				<p><b>IRC handle:</b></p>
+			</div>
+			<div class="contact-info">
+				<p>jbaublitzzz</p>
+			</div>
+			<div class="contact-type">
+				<p><b>Email:</b></p>
+			</div>
+			<div class="contact-info">
+				<p>john.m.baublitz@gmail.com</p>
+			</div>
+			<div class="contact-type">
+				<p><b>Github:</b></p>
+			</div>
+			<div class="contact-info">
+				<p><a href="https://github.com/jbaublitz">https://github.com/jbaublitz</a></p>
+			</div>
+		</template>
+
         <script> 
-            const { choose_page } = wasm_bindgen;
+            function choose_page(page) {
+                var body_panel = document.getElementById("center-panel");
+				while (body_panel.firstChild) {
+					body_panel.firstChild.remove();
+				}
+				var page = document.getElementById(page);
+				body_panel.appendChild(page.content.cloneNode(true));
+            }
 
             function fadeOut(page) {
                 var fio = document.getElementById("fadeinout");
                 fio.className = "body-panel-out";
                 fio.addEventListener('animationend', function() {
-                    wasm_bindgen.choose_page(page);
+                    choose_page(page);
                     this.className = "body-panel-in";
                 });
             }
 
-            async function run() {
-                await wasm_bindgen('./jbaublitz_me_wasm_bg.wasm');
-                choose_page('index');
+            function run() {
+                choose_page('home');
                 var fio = document.getElementById("fadeinout");
                 fio.className = "body-panel-in";
                 fio.removeAttribute('hidden');
