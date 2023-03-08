@@ -3,6 +3,11 @@
     font-weight: bold;
 }
 
+.cyrillic {
+    font-family: 'Vollkorn SC', serif;
+    font-weight: bold;
+}
+
 .header-one {
     padding: 20px;
     font-size: 35px;
