@@ -98,7 +98,7 @@
         </template>
 
         <script> 
-            function choose_page(page) {
+            function choosePage(page) {
                 var body_panel = document.getElementById("center-panel");
                 while (body_panel.firstChild) {
                     body_panel.firstChild.remove();
@@ -111,14 +111,13 @@
                 var fio = document.getElementById("fadeinout");
                 fio.className = "body-panel-out";
                 fio.addEventListener('animationend', function() {
-                    choose_page(page);
+                    choosePage(page);
                     this.className = "body-panel-in";
                 });
             }
 
             function run() {
-                choose_page('home');
-                var fio = document.getElementById("fadeinout");
+                choosePage('home');
             }
 
             run();
