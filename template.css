@@ -63,7 +63,8 @@ body {
     margin-right: 0px;
     font-family: 'IM Fell DW Pica SC', serif;
     float: right;
-    color: black;
+    color: white;
+    text-shadow: -1px -1px 0 #888, 1px -1px 0 #888, -1px 1px 0 #888, 1px 1px 0 #888;
     font-size: 17px;
 }
 
