@@ -1,9 +1,11 @@
 body {
-    background-image: linear-gradient(to right, black, #555555, black);
+    background-image: url('background.jpg');
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .body-panel-in {
-    opacity: 0.75;
+    opacity: 0.9;
     animation-name: fadein;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
@@ -11,7 +13,7 @@ body {
 }
 
 .body-panel-out {
-    opacity: 0.75;
+    opacity: 0.9;
     animation-name: fadeout;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
@@ -24,14 +26,14 @@ body {
         filter: blur(20px);
     }
     100% {
-        opacity: 0.75;
+        opacity: 0.9;
         filter: blur(0px);
     }
 }
 
 @keyframes fadeout {
     0% {
-        opacity: 0.75;
+        opacity: 0.9;
         filter: blur(0px);
     }
     100% {
@@ -77,8 +79,8 @@ a {
 
 .navigation div {
     font-family: 'Special Elite', cursive;
-    color: white;
-    background: black;
+    color: black;
+    background: white;
     opacity: 0.7;
     border-bottom-width: 0px;
     border-top-right-radius: 5px;
@@ -92,8 +94,7 @@ a {
 
 .navigation div:hover {
     cursor: pointer;
-    background-image: linear-gradient(white, black);
-    border-color: linear-gradient(white, black);
+    background: linear-gradient(gray, white);
 }
 
 .body-panel {
@@ -108,7 +109,7 @@ a {
     font-family: 'Special Elite', cursive;
     font-size: 22px;
     border: solid;
-    border-color: black;
+    border-color: white;
     border-width: 10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
