@@ -5,7 +5,7 @@ body {
 }
 
 .body-panel-in {
-    opacity: 0.7;
+    opacity: 0.8;
     animation-name: fadein;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
@@ -13,7 +13,7 @@ body {
 }
 
 .body-panel-out {
-    opacity: 0.7;
+    opacity: 0.8;
     animation-name: fadeout;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
@@ -26,14 +26,14 @@ body {
         filter: blur(20px);
     }
     100% {
-        opacity: 0.7;
+        opacity: 0.8;
         filter: blur(0px);
     }
 }
 
 @keyframes fadeout {
     0% {
-        opacity: 0.7;
+        opacity: 0.8;
         filter: blur(0px);
     }
     100% {
@@ -55,7 +55,7 @@ body {
     margin-right: 2px;
     font-family: 'IM Fell DW Pica SC', serif;
     float: right;
-    color: gray;
+    color: white;
 }
 
 #banner-link-right:hover {
@@ -63,7 +63,7 @@ body {
     margin-right: 0px;
     font-family: 'IM Fell DW Pica SC', serif;
     float: right;
-    color: white;
+    color: black;
     font-size: 17px;
 }
 
@@ -79,9 +79,9 @@ a {
 
 .navigation div {
     font-family: 'Special Elite', cursive;
-    color: black;
-    background: white;
-    opacity: 0.7;
+    color: white;
+    background: black;
+    opacity: 0.8;
     border-bottom-width: 0px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -94,7 +94,7 @@ a {
 
 .navigation div:hover {
     cursor: pointer;
-    background: linear-gradient(gray, white);
+    background: linear-gradient(gray, black);
 }
 
 .body-panel {
@@ -109,13 +109,14 @@ a {
     font-family: 'Special Elite', cursive;
     font-size: 22px;
     border: solid;
-    border-color: white;
+    color: white;
+    border-color: black;
     border-width: 10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: white;
-    opacity: 0.7;
+    background-color: black;
+    opacity: 0.8;
     text-align: center;
     padding: 10px;
     padding-left: 35px;
@@ -124,7 +125,7 @@ a {
 
 #center-panel h1 {
     margin: 30px;
-    color: black;
+    color: white;
 }
 
 #center-panel p {
@@ -136,3 +137,12 @@ a {
     justify-content: center;
     width: 60%;
 }
+
+a {
+    color: red;
+}
+
+a:visited {
+    color: orange;
+}
+
