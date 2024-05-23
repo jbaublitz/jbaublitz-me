@@ -53,7 +53,6 @@ body {
 #banner-link-right {
     margin-top: 2px;
     margin-right: 2px;
-    font-family: 'IM Fell DW Pica SC', serif;
     float: right;
     color: white;
 }
@@ -61,7 +60,6 @@ body {
 #banner-link-right:hover {
     margin-top: 0px;
     margin-right: 0px;
-    font-family: 'IM Fell DW Pica SC', serif;
     float: right;
     color: white;
     text-shadow: -1px -1px 0 #888, 1px -1px 0 #888, -1px 1px 0 #888, 1px 1px 0 #888;
@@ -69,23 +67,24 @@ body {
 }
 
 a {
-    font-family: 'Special Elite', cursive;
     text-decoration: none;
     font-weight: bold;
 }
 
 .navigation {
     display: inline-block;
+    font-size: 20px;
 }
 
-.navigation div {
-    font-family: 'Special Elite', cursive;
+.navigation-top div {
     color: white;
     background: black;
     opacity: 0.8;
     border-bottom-width: 0px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     padding-top: 10px;
     padding-bottom: 7px;
     padding-left: 15px;
@@ -93,13 +92,33 @@ a {
     float: left;
 }
 
-.navigation div:hover {
+.navigation-top div:hover {
     cursor: pointer;
     background: linear-gradient(gray, black);
 }
 
+.navigation-bottom div {
+    color: white;
+    background: black;
+    opacity: 0.8;
+    border-bottom-width: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.navigation-bottom div:hover {
+    cursor: pointer;
+    background: linear-gradient(black, gray);
+}
+
 .body-panel {
-    font-family: 'IM Fell DW Pica SC', serif;
     font-size: 20px;
     display: inline-block;
     vertical-align: top;
@@ -107,13 +126,11 @@ a {
 }
 
 #center-panel {
-    font-family: 'Special Elite', cursive;
     font-size: 22px;
     border: solid;
     color: white;
     border-color: black;
     border-width: 10px;
-    border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     background-color: black;

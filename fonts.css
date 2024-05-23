@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Typewriter Polyglott';
+    src: url(TruetypewriterPolyglott-mELa.ttf);
+}
+
+.font-one {
+    font-family: 'Typewriter Polyglott';
+}
+
+.font-two {
+    font-family: 'IM Fell Sc', 'Alegreya SC', 'normal';
+}

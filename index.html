@@ -2,46 +2,140 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alice&family=Special+Elite&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="fonts.css">
         <link rel="stylesheet" type="text/css" href="template.css">
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" type="text/css" href="humans.css">
         <link rel="stylesheet" type="text/css" href="contact.css">
-        <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Special+Elite|Vollkorn+SC&display=swap" rel="stylesheet">
         <title>John Baublitz</title>
     </head>
-    <body>
-        <div class="all">
-            <div class="banner">
-                <a id="banner-link-left" href="https://github.com/jbaublitz">
-                    <img src="github-mark-white.png">
-                </a>
-                <a id="banner-link-right" href="https://github.com/jbaublitz/jbaublitz-me">Website source code</a>
-            </div>
-            <div id="fadeinout" class="body-panel-in">
-                <div class="body-panel"></div>
-                <div class="center-panel-container body-panel">
-                    <nav class="navigation">
-                        <div onclick="fadeOut('home');">Home</div>
-                        <div onclick="fadeOut('humans');">humans.txt</div>
-                        <div onclick="fadeOut('contact');">Contact</div>
-                    </nav>
-                    <div id="center-panel">
-                        <p>If you have JavaScript disabled, <a href="home.html">click here!</a></p>
-                    </div>
+    <body class="font-one">
+        <template id="body-en">
+            <div id="all" class="body-panel-in">
+                <div class="banner">
+                    <a id="banner-link-left" href="https://github.com/jbaublitz">
+                        <img src="github-mark-white.png">
+                    </a>
+                    <a id="banner-link-right" href="https://github.com/jbaublitz/jbaublitz-me">Website source code</a>
                 </div>
-                <div class="body-panel"></div>
+                <div id="fadeinout">
+                    <div class="body-panel"></div>
+                    <div class="center-panel-container body-panel">
+                        <nav class="navigation navigation-top">
+                            <div onclick="fadeOut('home');">Home</div>
+                            <div onclick="fadeOut('humans');">humans.txt</div>
+                            <div onclick="fadeOut('contact');">Contact</div>
+                        </nav>
+                        <div id="center-panel"></div>
+                    </div>
+                    <div class="body-panel"></div>
+                    <nav class="navigation navigation-bottom">
+                        <div onclick="fadeLanguage('en')">English</div>
+                        <div onclick="fadeLanguage('fr')">Français</div>
+                        <div onclick="fadeLanguage('uk')">Українська</div>
+                        <div onclick="fadeLanguage('ru')">Русский</div>
+                    </nav>
+                </div>
             </div>
-        </div>
+        </template>
 
-        <template id=home>
+        <template id="body-fr">
+            <div id="all" class="body-panel-in">
+                <div class="banner">
+                    <a id="banner-link-left" href="https://github.com/jbaublitz">
+                        <img src="github-mark-white.png">
+                    </a>
+                    <a id="banner-link-right" href="https://github.com/jbaublitz/jbaublitz-me">Code du site</a>
+                </div>
+                <div id="fadeinout">
+                    <div class="body-panel"></div>
+                    <div class="center-panel-container body-panel">
+                        <nav class="navigation navigation-top">
+                            <div onclick="fadeOut('home');">Accueil</div>
+                            <div onclick="fadeOut('humans');">Aspects humains</div>
+                            <div onclick="fadeOut('contact');">Contacte</div>
+                        </nav>
+                        <div id="center-panel"></div>
+                    </div>
+                    <div class="body-panel"></div>
+                    <nav class="navigation navigation-bottom">
+                        <div onclick="fadeLanguage('en')">English</div>
+                        <div onclick="fadeLanguage('fr')">Français</div>
+                        <div onclick="fadeLanguage('uk')">Українська</div>
+                        <div onclick="fadeLanguage('ru')">Русский</div>
+                    </nav>
+                </div>
+            </div>
+        </template>
+
+        <template id="body-uk">
+            <div id="all" class="body-panel-in">
+                <div class="banner">
+                    <a id="banner-link-left" href="https://github.com/jbaublitz">
+                        <img src="github-mark-white.png">
+                    </a>
+                    <a id="banner-link-right" href="https://github.com/jbaublitz/jbaublitz-me">Код сайту</a>
+                </div>
+                <div id="fadeinout">
+                    <div class="body-panel"></div>
+                    <div class="center-panel-container body-panel">
+                        <nav class="navigation navigation-top">
+                            <div onclick="fadeOut('home');">Home</div>
+                            <div onclick="fadeOut('humans');">humans.txt</div>
+                            <div onclick="fadeOut('contact');">Contact</div>
+                        </nav>
+                        <div id="center-panel"></div>
+                    </div>
+                    <div class="body-panel"></div>
+                    <nav class="navigation navigation-bottom">
+                        <div onclick="fadeLanguage('en')">English</div>
+                        <div onclick="fadeLanguage('fr')">Français</div>
+                        <div onclick="fadeLanguage('uk')">Українська</div>
+                        <div onclick="fadeLanguage('ru')">Русский</div>
+                    </nav>
+                </div>
+            </div>
+        </template>
+
+        <template id="body-ru">
+            <div id="all" class="body-panel-in">
+                <div class="banner">
+                    <a id="banner-link-left" href="https://github.com/jbaublitz">
+                        <img src="github-mark-white.png">
+                    </a>
+                    <a id="banner-link-right" href="https://github.com/jbaublitz/jbaublitz-me">Код сайта</a>
+                </div>
+                <div id="fadeinout">
+                    <div class="body-panel"></div>
+                    <div class="center-panel-container body-panel">
+                        <nav class="navigation navigation-top">
+                            <div onclick="fadeOut('home');">Приветствие</div>
+                            <div onclick="fadeOut('humans');">Человеческие Факторы</div>
+                            <div onclick="fadeOut('contact');">Контакт</div>
+                        </nav>
+                        <div id="center-panel"></div>
+                    </div>
+                    <div class="body-panel"></div>
+                    <nav class="navigation navigation-bottom">
+                        <div onclick="fadeLanguage('en')">English</div>
+                        <div onclick="fadeLanguage('fr')">Français</div>
+                        <div onclick="fadeLanguage('uk')">Українська</div>
+                        <div onclick="fadeLanguage('ru')">Русский</div>
+                    </nav>
+                </div>
+            </div>
+        </template>
+
+        <template id="home-en">
             <div id="center-panel-inner">
-                <div class="header header-one">Hello! Bonjour! <div class="cyrillic">Привет! Привіт!</div></div>
+                <div class="header header-one font-two">Hello!</div>
                 <div class="header header-two">I'm John Baublitz and I do a lot of open source work.</div>
                 <div class="header header-two">A little bit about me and my interests:</div>
                 <div class="body">
                     <p>I have been hacking on things since 2011. Feel free to poke around my Github for my open source personal projects and contributions. Most of my time is divided between contributing to large open source projects and maintaining my own personal projects in the hopes that they may be useful to someone along the way.</p>
                     <p>Some of the areas I enjoy focusing on most are:</p>
-                    <div class="center-list">
+                    <div class="center-list font-two">
                         <ul>
                             <li>storage</li>
                             <li>strong typing</li>
@@ -57,26 +151,143 @@
             </div>
         </template>
 
-        <template id="humans">
+        <template id="home-fr">
+            <div id="center-panel-inner">
+                <div class="header header-one font-two">Bonjour!</div>
+                <div class="header header-two">Je m'appelle John Baublitz and et je travaille souvent en logiciel ouvert.</div>
+                <div class="header header-two">Un peu à propos de moi et mes intérêts:</div>
+                <div class="body">
+                    <p>Je programme depuis l'année 2011. N'hésitez pas de regarder mon Github pour mes projets personnels de logiciel ouvert et mes contibutions. La plupart de mon temps est divisée entre des contributions à de grands projets ouverts et maintenir mes projects personnels en l'espoir d'aider quelqu'un d'autre.</p>
+                    <p>Quelques sujets sur lesquels j'aime me focaliser sont:</p>
+                    <div class="center-list font-two">
+                        <ul>
+                            <li>le stockage</li>
+                            <li>le typage fort</li>
+                            <li>les piles de réseau</li>
+                            <li>les compilateurs et les langages de programmation</li>
+                            <li>travailler avec les systèmes d'exploitation dans l'espace noyau et utilisateur</li>
+                            <li>sécurité des systèmes</li>
+                            <li>parfois j'écris des outils pour me faciliter la vie</li>
+                        </ul>
+                    </div>
+                    <p>Comme je travaille dans ces domaines, j'écris principalement en C, Rust et Python.</p>
+                </div>
+            </div>
+        </template>
+
+        <template id="home-uk">
+            <div id="center-panel-inner">
+                <div class="header header-one font-two">Привіт!</div></div>
+                <div class="header header-two">Мене звати John Baublitz і я багато працюю в сфері відкритого коду.</div>
+                <div class="header header-two">Трохи про мене й мої інтереси:</div>
+                <div class="body">
+                    <p>Я пишу код з 2011-ого року. Не соромтеся переглянути мій Github, щоб побачити мої особисті проєкти з відкритим кодом і внески. Більшість мого часу розділена між внесками на великі відкриті проєкти та обслуговуванням моїх особистих проєктів у надії, що вони комусь будуть корисні.</p>
+                    <p>Кілька тем, на які мені подобається зосередитися:</p>
+                    <div class="center-list font-two">
+                        <ul>
+                            <li>Зберігання</li>
+                            <li>Строга типізація</li>
+                            <li>Мережеві стеки</li>
+                            <li>Компілятори й мови програмування</li>
+                            <li>Працювати з системами в просторі ядра та користувача</li>
+                            <li>Безпека систем</li>
+                            <li>Інколи написання інструментів, щоб полегшити життя собі</li>
+                        </ul>
+                    </div>
+                    <p>Тому що я працюю в таких областях, я найчастіше використовую C, Python і Rust, щоб досягти результату.</p>
+                </div>
+            </div>
+        </template>
+
+        <template id="home-ru">
+            <div id="center-panel-inner">
+                <div class="header header-one font-two">Привет!</div></div>
+                <div class="header header-two">Меня зовут John Baublitz и я много работаю в сфере открытого кода.</div>
+                <div class="header header-two">Немного о мне и моих интересах:</div>
+                <div class="body cyrillic">
+                    <p>Я пишу код с 2011-ого года. Не стесняйтесь осмотреть мой Github, чтобы видеть мои личные проекты с открытым кодом и взносы. Большинство моего времени разделенное между взносами на большие открытие проекты и содержанием моих личных проектов в надежде, что они кому-то будут полезны.</p>
+                    <p>Некоторые темы, на которые мне нравится сосредотачиваться:</p>
+                    <div class="center-list font-two">
+                        <ul class="cyrillic">
+                            <li>Хранение</li>
+                            <li>Строгая типизация</li>
+                            <li>Сетевые стеки</li>
+                            <li>Компиляторы и языки программирования</li>
+                            <li>Работать с системами в пространстве ядра и пользователя</li>
+                            <li>Безопасность систем</li>
+                            <li>Иногда написание инструментов, чтобы облегчить жизнь себе</li>
+                        </ul>
+                    </div>
+                    <p>Потому что я работаю в таких областях, я в основном использую C, Python и Rust, чтобы добиться цели.</p>
+                </div>
+            </div>
+        </template>
+
+        <template id="humans-en">
             <div class="body">
-                <div class="summary">
+                <div class="summary font-two">
                     <p>We often forget about the <b>human</b> component of software in the industry.</p>
                 </div>
                 <p>In an effort to challenge the notion that software is only about the tech, these are the things I try to bring to my collaborations:</p>
             </div>
-            <ul class="left-list">
+            <ul class="left-list font-two">
                 <li>Communicate online like you would face to face</li>
                 <li>Acknowledge that we're all still learning</li>
                 <li>Diversity matters and starts with individual acceptance of difference</li>
                 <li>When explaining, think back to when you were learning and explain it to yourself back then</li>
                 <li>Empathy is crucial and should be practiced mutually during interactions with collaborators</li>
             </ul>
-            <div class="body">
-                <p>If you think diversity in tech matters, consider supporting <a href="https://www.resilientcoders.org">Resilient Coders</a>, an organization that's trying to make that happen in a real and actionable way!</p>
-            </div>
         </template>
 
-        <template id="contact">
+        <template id="humans-fr">
+            <div class="body">
+                <div class="summary font-two">
+                    <p>On oublie souvent les aspects <b>humains</b> du logiciel.</p>
+                </div>
+                <p>Dans un effort de remettre en question l'idée, que le logiciel est composé de seulement des aspects techniques, ce sont les idées, que j'essaie d'amener à mes collaborations:</p>
+            </div>
+            <ul class="left-list font-two">
+                <li>Comuniquez comme vous communiqueriez face à face</li>
+                <li>Reconnaissez que nous sommes tout encore en train d'apprendre</li>
+                <li>La diversité est importante et commence avec l'acceptation individuelle de difference</li>
+                <li>Quand vous expliquez, pensez d'un moment quand tu apprenais et expliquez-le à toi-même à ce moment-là</li>
+                <li>L'empathie est cruciale et doit être mutuellement pratiquée entre collaborateurs</li>
+            </ul>
+        </template>
+
+        <template id="humans-uk">
+            <div class="body">
+                <div class="summary font-two">
+                    <p>Ми часто забуваємо про <b>людську</b> сторону програмного забезпечення в цій сфері.</p>
+                </div>
+                <p>Щоб заперечити той факт, що програмування тільки складається з технологічних справ, це - речі, які я пробую приносити в співпраці:</p>
+            </div>
+            <ul class="left-list font-two">
+                <li>Спілкуйтеся, як би спікувалися віч-на-віч</li>
+                <li>Визнавайте, що ми всі ще вичаємо</li>
+                <li>Різноманітність важлива и можлива з індивідуальними прийняттям різниць</li>
+                <li>Коли ви пояснюєте, думайте про час, коли ви вивчали й пояснюйте собі в цьому часі</li>
+                <li>Емпатія - важлива й треба взаємно її практикувати співробітникам</li>
+            </ul>
+        </template>
+
+        <template id="humans-ru">
+            <div class="body">
+                <div class="summary font-two">
+                    <p>Мы часто забываем о <b>человеческом</b> факторе программного обеспечения в этом сфере.</p>
+                </div>
+                <p>Чтобы бросить вызов идее, что программирование только состоит из технологических дел, это - вещи, которые я пробую приносить в сотрудничества:</p>
+            </div>
+            <ul class="left-list font-two">
+                <li>Общайтесь, как бы общались лицом к лицу</li>
+                <li>Признавайте, что мы все ещё учим</li>
+                <li>Разнообразие важно и возможно с индивидуальным принятием разниц</li>
+                <li>Когда вы объясняете, думайте о времени, когда вы учили и объясните себе в этом времени</li>
+                <li>Эмпатия - важна и должны взаимно её практиковать сотрудники</li>
+            </ul>
+        </template>
+
+        <template id="contact-en">
             <div class="contact-type">
                 <p>Email:</p>
             </div>
@@ -91,13 +302,58 @@
             </div>
         </template>
 
+        <template id="contact-fr">
+            <div class="contact-type">
+                <p>Adresse e-mail:</p>
+            </div>
+            <div class="contact-info">
+                <p>john.m.baublitz@gmail.com</p>
+            </div>
+            <div class="contact-type">
+                <p>Github:</p>
+            </div>
+            <div class="contact-info">
+                <p><a href="https://github.com/jbaublitz">https://github.com/jbaublitz</a></p>
+            </div>
+        </template>
+
+        <template id="contact-uk">
+            <div class="contact-type">
+                <p>Адреса електронної пошти:</p>
+            </div>
+            <div class="contact-info">
+                <p>john.m.baublitz@gmail.com</p>
+            </div>
+            <div class="contact-type">
+                <p>Github:</p>
+            </div>
+            <div class="contact-info">
+                <p><a href="https://github.com/jbaublitz">https://github.com/jbaublitz</a></p>
+            </div>
+        </template>
+
+        <template id="contact-ru">
+            <div class="contact-type">
+                <p>Адрес електронной почты:</p>
+            </div>
+            <div class="contact-info">
+                <p>john.m.baublitz@gmail.com</p>
+            </div>
+            <div class="contact-type">
+                <p>Github:</p>
+            </div>
+            <div class="contact-info">
+                <p><a href="https://github.com/jbaublitz">https://github.com/jbaublitz</a></p>
+            </div>
+        </template>
+
         <script> 
-            function choosePage(page) {
+            function choosePage(page, language) {
                 var body_panel = document.getElementById("center-panel");
                 while (body_panel.firstChild) {
                     body_panel.firstChild.remove();
                 }
-                var page = document.getElementById(page);
+                var page = document.getElementById(page + '-' + language);
                 body_panel.appendChild(page.content.cloneNode(true));
             }
 
@@ -105,16 +361,45 @@
                 var fio = document.getElementById("fadeinout");
                 fio.className = "body-panel-out";
                 fio.addEventListener('animationend', function() {
-                    choosePage(page);
+                    choosePage(page, window.selectedLanguage);
                     this.className = "body-panel-in";
                 });
             }
 
-            function run() {
-                choosePage('home');
+            function fadeLanguage(language) {
+                var fio = document.getElementById("all");
+                fio.className = "body-panel-out";
+                fio.addEventListener('animationend', function() {
+                    chooseLanguage(language);
+                });
             }
 
-            run();
+            function parseLanguage(language) {
+                return language.split('-')[0];
+            }
+
+            function validateLanguage(language) {
+                if (language === 'fr' || language === 'uk' || language === 'ru') {
+                    return language;
+                } else {
+                    return 'en';
+                }
+            }
+
+            function chooseLanguage(language) {
+                var validatedLanguage = validateLanguage(language);
+                window.selectedLanguage = validatedLanguage;
+
+                var all = document.getElementById('all')
+                while (all && all.firstChild) {
+                    all.firstChild.remove()
+                }
+                var body = document.getElementById('body-' + window.selectedLanguage);
+                document.body.prepend(body.content.cloneNode(true));
+                choosePage('home', window.selectedLanguage);
+            }
+
+            chooseLanguage(parseLanguage(navigator.language));
         </script>
     </body>
 </html>
